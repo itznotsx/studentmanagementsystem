@@ -1,0 +1,272 @@
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Wrapper */
+#wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header */
+#header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Navigation */
+#topnav {
+    text-align: center;
+    padding: 10px;
+}
+
+#topnav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#topnav ul li {
+    margin: 5px;
+}
+
+#topnav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    background: #0056b3;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#topnav ul li a:hover {
+    background: #003f80;
+}
+
+/* Content Section */
+#content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Align radio buttons properly */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+/* Form Buttons */
+.form-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#InsertStudent {
+    background: #28a745;
+    color: white;
+}
+
+#InsertStudent:hover {
+    background: #218838;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    overflow-x: auto;
+}
+
+thead {
+    background: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px; /* Space between options */
+    align-items: center; /* Aligns vertically */
+    margin-top: 5px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between radio and label */
+    font-size: 16px; /* Ensure consistent label size */
+}
+
+/* Ensure radio buttons scale and align properly */
+.radio-group input[type="radio"] {
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* For Safari */
+    width: 20px; /* Set a fixed size */
+    height: 20px;
+    border: 2px solid #555; /* Custom border */
+    border-radius: 50%; /* Make it round */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Custom radio button checked state */
+.radio-group input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    width: 10px; /* Smaller inner circle */
+    height: 10px;
+    background-color: #007bff; /* Blue when selected */
+    border-radius: 50%;
+    top: 3px; /* Align inner circle */
+    left: 3px;
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 600px) {
+    .radio-group {
+        flex-direction: row; /* Ensure horizontal on small screens */
+        gap: 10px; /* Adjust gap for small screens */
+    }
+    
+    .radio-group label {
+        font-size: 14px; /* Slightly reduce font size */
+    }
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    background: #c1d1f1;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #wrapper {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #header {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    #topnav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, textarea, button {
+        font-size: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Button Spacing */
+#tblData td button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+/* Ensure buttons in table stack on mobile */
+@media screen and (max-width: 600px) {
+    #tblData td button {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
